@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tkkj.tkeyes.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/skoda"
+        android:scaleType="fitCenter"
+        app:layout_constraintRight_toLeftOf="@+id/guideline3"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/account"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintVertical_bias="0.503" />
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:id="@+id/guideline2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="58dp" />
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:id="@+id/guideline3"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="327dp" />
+    <EditText
+        android:id="@+id/account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="帐号"
+        android:imeOptions="actionNext"
+        android:nextFocusForward="@+id/password"
+        app:layout_constraintRight_toLeftOf="@+id/guideline3"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="密码"
+        android:imeOptions="actionDone"
+
+        android:inputType="textPassword"
+        app:layout_constraintRight_toLeftOf="@+id/guideline3"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/remember" />
+
+    <CheckBox
+        android:id="@+id/remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="记住密码"
+        android:textColor="@color/btbackfocused"
+        app:layout_constraintRight_toLeftOf="@+id/guideline3"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        android:onClick="onClick"/>
+    <Button
+        android:id="@+id/login"
+        android:layout_height="35dp"
+        android:layout_width="0dp"
+
+        android:background="@drawable/buttonshape"
+        android:text="登 录"
+        android:textColor="#ffffff"
+        app:layout_constraintRight_toLeftOf="@+id/guideline3"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/reg"
+        android:onClick="onClick"/>
+    <TextView
+        android:id="@+id/reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="注册"
+        app:layout_constraintRight_toLeftOf="@+id/guideline3"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/passwordforgotten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:text="忘记密码"
+
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        android:onClick="onClick"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/guideline3"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        android:layout_marginBottom="8dp" />
+
+
+</android.support.constraint.ConstraintLayout>
